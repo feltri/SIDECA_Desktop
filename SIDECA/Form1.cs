@@ -15,6 +15,13 @@ namespace SIDECA
         public Form1()
         {
             InitializeComponent();
+
+            if (DAO_Conexao.getConexao("143.106.241.3", "3306", "cl201111", "cl*02062006"))
+            {
+                Console.WriteLine("Conectado");
+            }
+            else
+                Console.WriteLine("Erro de conexão");
         }
 
         private void usuárioToolStripMenuItem_Click(object sender, EventArgs e)
@@ -47,6 +54,36 @@ namespace SIDECA
         }
 
         private void menuStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int tipo = DAO_Conexao.login(textBox1.Text, textBox2.Text);
+            if (tipo == 0)
+                MessageBox.Show("Usuário/Senha inválidos");
+            if (tipo == 1)
+            {
+                MessageBox.Show("Usuário ADM");
+                groupBox1.Visible = false;
+                menuStrip1.Enabled = true;
+            }
+            if (tipo == 2)
+            {
+                MessageBox.Show("Usuário Restrito");
+                groupBox1.Visible = false;
+                menuStrip1.Enabled = true;
+                cadastrarLoginToolStripMenuItem.Enabled = false;
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
