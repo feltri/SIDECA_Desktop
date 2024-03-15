@@ -11,10 +11,7 @@ namespace SIDECA
     {
         private string Descricao;
 
-        public Agressor(string descricao)
-        {
-            setDescricao(descricao);
-        }
+       
 
         public void setDescricao(string Descricao)
         {
