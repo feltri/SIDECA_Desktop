@@ -10,13 +10,13 @@ namespace SIDECA
     class DAO_Conexao
     {
         public static SqlConnection con;
-        public static Boolean getConexao(String local, String banco, String user, String senha)
+        public static Boolean getConexao(String local, String user, String banco, String senha)
         {
             Boolean retorno = false;
             try
             {
                 con = new SqlConnection("server=" + local + ";User ID=" + user + ";" +
-                    "database=" + banco + "; password=" + senha + "; SslMode = none");
+                    "database=" + banco + "; password=" + senha);
                 //con.Open();
                 retorno = true;
             }
@@ -76,5 +76,6 @@ namespace SIDECA
             }
             return cad;
         }
+
     }
 }
