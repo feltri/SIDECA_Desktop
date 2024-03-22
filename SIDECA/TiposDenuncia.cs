@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SIDECA
 {
-    public partial class Form9 : Form
+    public partial class TiposDenuncia : Form
     {
-        public Form9()
+        public TiposDenuncia()
         {
             InitializeComponent();
         }

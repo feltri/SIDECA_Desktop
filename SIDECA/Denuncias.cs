@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SIDECA
 {
-    internal class Denuncias
+     class Denuncias
     {
         private string Descricao;
 

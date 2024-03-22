@@ -1,6 +1,6 @@
 ﻿namespace SIDECA
 {
-    partial class Form8
+    partial class TipoDenuncia
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form8));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TipoDenuncia));
             this.button2 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,10 +41,10 @@
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.button2.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(474, 176);
+            this.button2.Location = new System.Drawing.Point(472, 184);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(132, 31);
-            this.button2.TabIndex = 13;
+            this.button2.TabIndex = 17;
             this.button2.Text = "Cadastrar";
             this.button2.UseVisualStyleBackColor = false;
             // 
@@ -53,33 +53,33 @@
             this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox2.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.ForeColor = System.Drawing.Color.Black;
-            this.textBox2.Location = new System.Drawing.Point(197, 112);
+            this.textBox2.Location = new System.Drawing.Point(195, 120);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(409, 30);
-            this.textBox2.TabIndex = 12;
+            this.textBox2.TabIndex = 16;
             this.textBox2.WordWrap = false;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(81, 115);
+            this.label2.Location = new System.Drawing.Point(79, 123);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(101, 25);
-            this.label2.TabIndex = 11;
+            this.label2.TabIndex = 15;
             this.label2.Text = "Descrição:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(77, 57);
+            this.label1.Location = new System.Drawing.Point(75, 65);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(203, 25);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Novo Tipo de Agressor";
+            this.label1.Size = new System.Drawing.Size(209, 25);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Novo Tipo de Denúncia";
             // 
-            // Form8
+            // Form9
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -89,8 +89,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form8";
-            this.Text = "Criar Agressor";
+            this.Name = "Form9";
+            this.Text = "Criar Denúncia";
             this.ResumeLayout(false);
             this.PerformLayout();
 
