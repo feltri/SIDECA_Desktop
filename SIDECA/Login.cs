@@ -16,7 +16,7 @@ namespace SIDECA
         {
             InitializeComponent();
 
-            if (DAO_Conexao.getConexao("143.106.241.3", "3306", "cl201111", "cl*02062006"))
+            if (DAO_Conexao.getConexao("143.106.241.3", "cl201111", "3306", "cl*02062006"))
             {
                 Console.WriteLine("Conectado");
             }
@@ -74,18 +74,16 @@ namespace SIDECA
                 groupBox1.Visible = false;
                 menuStrip1.Enabled = true;
             }
-            if (tipo == 2)
-            {
-                MessageBox.Show("Usuário Restrito");
-                groupBox1.Visible = false;
-                menuStrip1.Enabled = true;
-                cadastrarLoginToolStripMenuItem.Enabled = false;
-            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void sairToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
