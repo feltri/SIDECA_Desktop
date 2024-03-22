@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace SIDECA
 {
-    public partial class Form1 : Form
+    public partial class Login : Form
     {
-        public Form1()
+        public Login()
         {
             InitializeComponent();
 
-            if (DAO_Conexao.getConexao("143.106.241.3", "cl201111", "3306", "cl*02062006"))
+            if (DAO_Conexao.getConexao("143.106.241.3", "3306", "cl201111", "cl*02062006"))
             {
                 Console.WriteLine("Conectado");
             }
@@ -26,14 +26,14 @@ namespace SIDECA
 
         private void usuárioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form2 user = new Form2();
+            TiposUsuario user = new TiposUsuario();
             user.MdiParent = this;
             user.Show();
         }
 
         private void agressorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form3 agressor = new Form3();
+            TiposAgressor agressor = new TiposAgressor();
             agressor.MdiParent = this;
             agressor.Show();
         }
@@ -74,16 +74,18 @@ namespace SIDECA
                 groupBox1.Visible = false;
                 menuStrip1.Enabled = true;
             }
+            if (tipo == 2)
+            {
+                MessageBox.Show("Usuário Restrito");
+                groupBox1.Visible = false;
+                menuStrip1.Enabled = true;
+                cadastrarLoginToolStripMenuItem.Enabled = false;
+            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
-        }
-
-        private void sairToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
     }
 }
