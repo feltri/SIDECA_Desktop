@@ -65,7 +65,9 @@ namespace SIDECA
 
         private void button1_Click(object sender, EventArgs e)
         {
+            MessageBox.Show($"{textBox2.Text} - {PasswordHelper.Encrypt(textBox2.Text)}");
             int tipo = DAO_Conexao.login(textBox1.Text, textBox2.Text);
+        
             if (tipo == 0)
                 MessageBox.Show("Usuário/Senha inválidos");
             if (tipo == 1)
@@ -73,13 +75,6 @@ namespace SIDECA
                 MessageBox.Show("Usuário ADM");
                 groupBox1.Visible = false;
                 menuStrip1.Enabled = true;
-            }
-            if (tipo == 2)
-            {
-                MessageBox.Show("Usuário Restrito");
-                groupBox1.Visible = false;
-                menuStrip1.Enabled = true;
-                cadastrarLoginToolStripMenuItem.Enabled = false;
             }
         }
 

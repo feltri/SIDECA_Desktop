@@ -37,7 +37,7 @@ namespace SIDECA
             try
             {
                 con.Open();
-                SqlCommand login = new SqlCommand("Select * from Estudio_Login where usuario = '" + usuario + "' and senha = '" + senha + "'", con);
+                SqlCommand login = new SqlCommand("Select * from Usuario where usuario = '" + usuario + "' and senha = '" + PasswordHelper.Encrypt(senha) + "'", con);
                 SqlDataReader resultado = login.ExecuteReader();
                 if (resultado.Read())
                 {
@@ -61,7 +61,7 @@ namespace SIDECA
             try
             {
                 con.Open();
-                SqlCommand insere = new SqlCommand("insert into Estudio_Login (usuario, senha, tipo) " +
+                SqlCommand insere = new SqlCommand("insert into Usuario (usuario, senha, tipo) " +
                     "values ('" + usuario + "','" + senha + "'," + tipo + ")", con);
                 insere.ExecuteNonQuery();
                 cad = true;

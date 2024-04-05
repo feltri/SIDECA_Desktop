@@ -61,6 +61,7 @@
     <Compile Include="CategoriaPost.Designer.cs">
       <DependentUpon>CategoriaPost.cs</DependentUpon>
     </Compile>
+    <Compile Include="PasswordHelper.cs" />
     <Compile Include="TiposUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
