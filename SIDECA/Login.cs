@@ -16,7 +16,7 @@ namespace SIDECA
         {
             InitializeComponent();
 
-            if (DAO_Conexao.getConexao("143.106.241.3", "3306", "cl201111", "cl*02062006"))
+            if (DAO_Conexao.getConexao("143.106.241.3", "cl201111", "cl201111", "cl*02062006"))
             {
                 Console.WriteLine("Conectado");
             }
