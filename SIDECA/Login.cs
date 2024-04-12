@@ -82,5 +82,15 @@ namespace SIDECA
         {
 
         }
+
+        private void agressorToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void denúnciasToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

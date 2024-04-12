@@ -239,36 +239,38 @@
             // agressorToolStripMenuItem1
             // 
             this.agressorToolStripMenuItem1.Name = "agressorToolStripMenuItem1";
-            this.agressorToolStripMenuItem1.Size = new System.Drawing.Size(152, 26);
+            this.agressorToolStripMenuItem1.Size = new System.Drawing.Size(180, 26);
             this.agressorToolStripMenuItem1.Text = "Agressor";
+            this.agressorToolStripMenuItem1.Click += new System.EventHandler(this.agressorToolStripMenuItem1_Click);
             // 
             // denúnciasToolStripMenuItem1
             // 
             this.denúnciasToolStripMenuItem1.Name = "denúnciasToolStripMenuItem1";
-            this.denúnciasToolStripMenuItem1.Size = new System.Drawing.Size(152, 26);
+            this.denúnciasToolStripMenuItem1.Size = new System.Drawing.Size(180, 26);
             this.denúnciasToolStripMenuItem1.Text = "Denúncias";
+            this.denúnciasToolStripMenuItem1.Click += new System.EventHandler(this.denúnciasToolStripMenuItem1_Click);
             // 
             // postToolStripMenuItem1
             // 
             this.postToolStripMenuItem1.Name = "postToolStripMenuItem1";
-            this.postToolStripMenuItem1.Size = new System.Drawing.Size(152, 26);
+            this.postToolStripMenuItem1.Size = new System.Drawing.Size(180, 26);
             this.postToolStripMenuItem1.Text = "Post";
             // 
             // usuárioToolStripMenuItem1
             // 
             this.usuárioToolStripMenuItem1.Name = "usuárioToolStripMenuItem1";
-            this.usuárioToolStripMenuItem1.Size = new System.Drawing.Size(152, 26);
+            this.usuárioToolStripMenuItem1.Size = new System.Drawing.Size(180, 26);
             this.usuárioToolStripMenuItem1.Text = "Usuário";
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(149, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(177, 6);
             // 
             // sairToolStripMenuItem1
             // 
             this.sairToolStripMenuItem1.Name = "sairToolStripMenuItem1";
-            this.sairToolStripMenuItem1.Size = new System.Drawing.Size(152, 26);
+            this.sairToolStripMenuItem1.Size = new System.Drawing.Size(180, 26);
             this.sairToolStripMenuItem1.Text = "Sair";
             // 
             // relatóriosToolStripMenuItem1

@@ -11,7 +11,17 @@ namespace SIDECA
      class Denuncias
     {
         private string Descricao;
+        private int id;
 
+        public void setId(int id)
+        {
+            this.id = id; 
+        }
+
+        public int getId()
+        {
+            return this.id;
+        }
 
         public void setDescricao(string Descricao)
         {
@@ -22,13 +32,13 @@ namespace SIDECA
         {
             return this.Descricao;
         }
-        public bool cadastrarAgressor()
+        public bool cadastrarDenuncia()
         {
             bool cad = false;
             try
             {
                 DAO_Conexao.con.Open();
-                MySqlCommand insere = new MySqlCommand("insert into TipoAgressor (descricao) values ('" + Descricao + "')", DAO_Conexao.con);
+                MySqlCommand insere = new MySqlCommand("insert into TipoDenuncia (descricao) values ('" + Descricao + "')", DAO_Conexao.con);
 
                 insere.ExecuteNonQuery();
                 cad = true;
@@ -44,13 +54,13 @@ namespace SIDECA
             return cad;
         }
 
-        public bool consultarAgressor()
+        public bool consultarDenuncia()
         {
             Boolean existe = false;
             try
             {
                 DAO_Conexao.con.Open();
-                MySqlCommand consulta = new MySqlCommand("SELECT  * FROM TipoAgressor   WHERE descricao= '" + getDescricao() + "'", DAO_Conexao.con);
+                MySqlCommand consulta = new MySqlCommand("SELECT  * FROM TipoDenuncia   WHERE descricao= '" + getDescricao() + "'", DAO_Conexao.con);
                 MySqlDataReader resultado = consulta.ExecuteReader();
                 if (resultado.Read())
                 {
@@ -69,13 +79,13 @@ namespace SIDECA
             return existe;
         }
 
-        public bool excluirAluno()
+        public bool excluirDenuncia()
         {
             Boolean existe = false;
             try
             {
                 DAO_Conexao.con.Open();
-                MySqlCommand consulta = new MySqlCommand("DELETE * FROM TipoAgressor WHERE descricao= '" + Descricao + "'", DAO_Conexao.con);
+                MySqlCommand consulta = new MySqlCommand("DELETE * FROM TipoAgressor   WHERE id= '" + id + "'", DAO_Conexao.con);
                 MySqlDataReader resultado = consulta.ExecuteReader();
                 if (resultado.Read())
                 {
