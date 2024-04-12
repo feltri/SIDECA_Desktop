@@ -41,7 +41,7 @@ namespace SIDECA
                 MySqlDataReader resultado = login.ExecuteReader();
                 if (resultado.Read())
                 {
-                    tipo = Convert.ToInt32(resultado["tipo"].ToString());
+                    tipo = Convert.ToInt32(resultado["tipoUsuario"].ToString());
                 }
             }
             catch (Exception ex)
@@ -61,7 +61,7 @@ namespace SIDECA
             try
             {
                 con.Open();
-                MySqlCommand insere = new MySqlCommand("insert into Usuario (usuario, senha, tipo) " +
+                MySqlCommand insere = new MySqlCommand("insert into Usuario (login, senha, tipoUsuario) " +
                     "values ('" + usuario + "','" + senha + "'," + tipo + ")", con);
                 insere.ExecuteNonQuery();
                 cad = true;

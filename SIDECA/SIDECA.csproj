@@ -114,36 +114,6 @@
       <DependentUpon>CategoriaPost.cs</DependentUpon>
     </Compile>
     <Compile Include="PasswordHelper.cs" />
-    <Compile Include="TiposUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TiposUsuario.Designer.cs">
-      <DependentUpon>TiposUsuario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TiposAgressor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TiposAgressor.Designer.cs">
-      <DependentUpon>TiposAgressor.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TiposDenuncia.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TiposDenuncia.Designer.cs">
-      <DependentUpon>TiposDenuncia.cs</DependentUpon>
-    </Compile>
-    <Compile Include="StatusDenuncia.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="StatusDenuncia.Designer.cs">
-      <DependentUpon>StatusDenuncia.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TiposCategoria.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TiposCategoria.Designer.cs">
-      <DependentUpon>TiposCategoria.cs</DependentUpon>
-    </Compile>
     <Compile Include="TipoUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +132,36 @@
     <Compile Include="TipoDenuncia.Designer.cs">
       <DependentUpon>TipoDenuncia.cs</DependentUpon>
     </Compile>
+    <Compile Include="StatusDenuncia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StatusDenuncia.Designer.cs">
+      <DependentUpon>StatusDenuncia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TipoCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TipoCategoria.Designer.cs">
+      <DependentUpon>TipoCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CadUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadUsuario.Designer.cs">
+      <DependentUpon>CadUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CadAgressor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadAgressor.Designer.cs">
+      <DependentUpon>CadAgressor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CadDenuncia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadDenuncia.Designer.cs">
+      <DependentUpon>CadDenuncia.cs</DependentUpon>
+    </Compile>
     <Compile Include="Post.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -172,21 +172,6 @@
     <EmbeddedResource Include="CategoriaPost.resx">
       <DependentUpon>CategoriaPost.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TiposUsuario.resx">
-      <DependentUpon>TiposUsuario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TiposAgressor.resx">
-      <DependentUpon>TiposAgressor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TiposDenuncia.resx">
-      <DependentUpon>TiposDenuncia.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="StatusDenuncia.resx">
-      <DependentUpon>StatusDenuncia.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TiposCategoria.resx">
-      <DependentUpon>TiposCategoria.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="TipoUsuario.resx">
       <DependentUpon>TipoUsuario.cs</DependentUpon>
     </EmbeddedResource>
@@ -195,6 +180,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TipoDenuncia.resx">
       <DependentUpon>TipoDenuncia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StatusDenuncia.resx">
+      <DependentUpon>StatusDenuncia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TipoCategoria.resx">
+      <DependentUpon>TipoCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadUsuario.resx">
+      <DependentUpon>CadUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadAgressor.resx">
+      <DependentUpon>CadAgressor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadDenuncia.resx">
+      <DependentUpon>CadDenuncia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

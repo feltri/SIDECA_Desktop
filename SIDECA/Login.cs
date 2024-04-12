@@ -23,19 +23,8 @@ namespace SIDECA
             else
                 Console.WriteLine("Erro de conexão");
         }
-
-        private void usuárioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            TiposUsuario user = new TiposUsuario();
-            user.MdiParent = this;
-            user.Show();
-        }
-
         private void agressorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            TiposAgressor agressor = new TiposAgressor();
-            agressor.MdiParent = this;
-            agressor.Show();
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -65,7 +54,6 @@ namespace SIDECA
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show($"{textBox2.Text} - {PasswordHelper.Encrypt(textBox2.Text)}");
             int tipo = DAO_Conexao.login(textBox1.Text, textBox2.Text);
         
             if (tipo == 0)
@@ -79,6 +67,41 @@ namespace SIDECA
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sairToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void agressorToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms.OfType<TipoAgressor>.count() == 0)
+            {
+                TipoAgressor user = new TipoAgressor();
+                user.MdiParent = this;
+                user.Show();
+            }
+        }
+
+        private void denúnciasToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void postToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void usuárioToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void relatóriosToolStripMenuItem1_Click(object sender, EventArgs e)
         {
 
         }
