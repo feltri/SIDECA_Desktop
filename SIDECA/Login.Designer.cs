@@ -69,9 +69,9 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(54, 37);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(490, 287);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
@@ -84,7 +84,7 @@
             this.button1.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.Location = new System.Drawing.Point(75, 180);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(346, 27);
             this.button1.TabIndex = 4;
@@ -96,7 +96,7 @@
             // 
             this.textBox2.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(135, 125);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(288, 26);
@@ -106,7 +106,7 @@
             // 
             this.textBox1.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(135, 86);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(288, 26);
             this.textBox1.TabIndex = 2;
@@ -168,7 +168,6 @@
             this.usuárioToolStripMenuItem.Name = "usuárioToolStripMenuItem";
             this.usuárioToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.usuárioToolStripMenuItem.Text = "Usuário";
-            this.usuárioToolStripMenuItem.Click += new System.EventHandler(this.usuárioToolStripMenuItem_Click);
             // 
             // agressorToolStripMenuItem
             // 
@@ -208,6 +207,7 @@
             // 
             // menuStrip2
             // 
+            this.menuStrip2.Enabled = false;
             this.menuStrip2.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -238,45 +238,51 @@
             // agressorToolStripMenuItem1
             // 
             this.agressorToolStripMenuItem1.Name = "agressorToolStripMenuItem1";
-            this.agressorToolStripMenuItem1.Size = new System.Drawing.Size(152, 26);
+            this.agressorToolStripMenuItem1.Size = new System.Drawing.Size(180, 26);
             this.agressorToolStripMenuItem1.Text = "Agressor";
+            this.agressorToolStripMenuItem1.Click += new System.EventHandler(this.agressorToolStripMenuItem1_Click);
             // 
             // denúnciasToolStripMenuItem1
             // 
             this.denúnciasToolStripMenuItem1.Name = "denúnciasToolStripMenuItem1";
-            this.denúnciasToolStripMenuItem1.Size = new System.Drawing.Size(152, 26);
+            this.denúnciasToolStripMenuItem1.Size = new System.Drawing.Size(180, 26);
             this.denúnciasToolStripMenuItem1.Text = "Denúncias";
+            this.denúnciasToolStripMenuItem1.Click += new System.EventHandler(this.denúnciasToolStripMenuItem1_Click);
             // 
             // postToolStripMenuItem1
             // 
             this.postToolStripMenuItem1.Name = "postToolStripMenuItem1";
-            this.postToolStripMenuItem1.Size = new System.Drawing.Size(152, 26);
+            this.postToolStripMenuItem1.Size = new System.Drawing.Size(180, 26);
             this.postToolStripMenuItem1.Text = "Post";
+            this.postToolStripMenuItem1.Click += new System.EventHandler(this.postToolStripMenuItem1_Click);
             // 
             // usuárioToolStripMenuItem1
             // 
             this.usuárioToolStripMenuItem1.Name = "usuárioToolStripMenuItem1";
-            this.usuárioToolStripMenuItem1.Size = new System.Drawing.Size(152, 26);
+            this.usuárioToolStripMenuItem1.Size = new System.Drawing.Size(180, 26);
             this.usuárioToolStripMenuItem1.Text = "Usuário";
+            this.usuárioToolStripMenuItem1.Click += new System.EventHandler(this.usuárioToolStripMenuItem1_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(149, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(177, 6);
             // 
             // sairToolStripMenuItem1
             // 
             this.sairToolStripMenuItem1.Name = "sairToolStripMenuItem1";
-            this.sairToolStripMenuItem1.Size = new System.Drawing.Size(152, 26);
+            this.sairToolStripMenuItem1.Size = new System.Drawing.Size(180, 26);
             this.sairToolStripMenuItem1.Text = "Sair";
+            this.sairToolStripMenuItem1.Click += new System.EventHandler(this.sairToolStripMenuItem1_Click);
             // 
             // relatóriosToolStripMenuItem1
             // 
             this.relatóriosToolStripMenuItem1.Name = "relatóriosToolStripMenuItem1";
             this.relatóriosToolStripMenuItem1.Size = new System.Drawing.Size(90, 25);
             this.relatóriosToolStripMenuItem1.Text = "Relatórios";
+            this.relatóriosToolStripMenuItem1.Click += new System.EventHandler(this.relatóriosToolStripMenuItem1_Click);
             // 
-            // Form1
+            // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -287,8 +293,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "Form1";
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "Login";
             this.Text = "SIDECA";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);

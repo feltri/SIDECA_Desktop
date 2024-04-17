@@ -1,6 +1,6 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,13 +9,13 @@ namespace SIDECA
 {
     class DAO_Conexao
     {
-        public static SqlConnection con;
-        public static Boolean getConexao(String local, String user, String banco, String senha)
+        public static MySqlConnection con;
+        public static Boolean getConexao(String local, String banco, string user, String senha)
         {
             Boolean retorno = false;
             try
             {
-                con = new SqlConnection("server=" + local + ";User ID=" + user + ";" +
+                con = new MySqlConnection("server=" + local + ";User ID=" + user + ";" +
                     "database=" + banco + "; password=" + senha);
                 //con.Open();
                 retorno = true;
@@ -37,11 +37,11 @@ namespace SIDECA
             try
             {
                 con.Open();
-                SqlCommand login = new SqlCommand("Select * from Estudio_Login where usuario = '" + usuario + "' and senha = '" + senha + "'", con);
-                SqlDataReader resultado = login.ExecuteReader();
+                MySqlCommand login = new MySqlCommand("Select * from Usuario where login = '" + usuario + "' and senha = '" + PasswordHelper.Encrypt(senha) + "'", con);
+                MySqlDataReader resultado = login.ExecuteReader();
                 if (resultado.Read())
                 {
-                    tipo = Convert.ToInt32(resultado["tipo"].ToString());
+                    tipo = Convert.ToInt32(resultado["tipoUsuario"].ToString());
                 }
             }
             catch (Exception ex)
@@ -61,7 +61,7 @@ namespace SIDECA
             try
             {
                 con.Open();
-                SqlCommand insere = new SqlCommand("insert into Estudio_Login (usuario, senha, tipo) " +
+                MySqlCommand insere = new MySqlCommand("insert into Usuario (login, senha, tipoUsuario) " +
                     "values ('" + usuario + "','" + senha + "'," + tipo + ")", con);
                 insere.ExecuteNonQuery();
                 cad = true;

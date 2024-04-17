@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -34,7 +35,7 @@ namespace SIDECA
             try
             {
                 DAO_Conexao.con.Open();
-                SqlCommand insere = new SqlCommand("insert into TipoAgressor (descricao) values ('" + Descricao + "')", DAO_Conexao.con);
+                MySqlCommand insere = new MySqlCommand("insert into TipoAgressor (descricao) values ('" + Descricao + "')", DAO_Conexao.con);
 
                 insere.ExecuteNonQuery();
                 cad = true;
@@ -56,8 +57,8 @@ namespace SIDECA
             try
             {
                 DAO_Conexao.con.Open();
-                SqlCommand consulta = new SqlCommand("SELECT  * FROM TipoAgressor   WHERE descricao= '" + getDescricao() + "'", DAO_Conexao.con);
-                SqlDataReader resultado = consulta.ExecuteReader();
+                MySqlCommand consulta = new MySqlCommand("SELECT  * FROM TipoAgressor   WHERE descricao= '" + getDescricao() + "'", DAO_Conexao.con);
+                MySqlDataReader resultado = consulta.ExecuteReader();
                 if (resultado.Read())
                 {
                     existe = true;
@@ -81,8 +82,8 @@ namespace SIDECA
             try
             {
                 DAO_Conexao.con.Open();
-                SqlCommand consulta = new SqlCommand ("DELETE * FROM TipoAgressor   WHERE descricao= '" + Descricao + "'", DAO_Conexao.con);
-                SqlDataReader resultado = consulta.ExecuteReader();
+                MySqlCommand consulta = new MySqlCommand ("DELETE * FROM TipoAgressor   WHERE descricao= '" + Descricao + "'", DAO_Conexao.con);
+                MySqlDataReader resultado = consulta.ExecuteReader();
                 if (resultado.Read())
                 {
                     existe = true;
