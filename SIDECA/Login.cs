@@ -78,7 +78,7 @@ namespace SIDECA
 
         private void agressorToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            if (Application.OpenForms.OfType<TipoAgressor>.count() == 0)
+            if (Application.OpenForms.OfType<TipoAgressor>().Count() == 0)
             {
                 TipoAgressor user = new TipoAgressor();
                 user.MdiParent = this;
