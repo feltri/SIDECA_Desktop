@@ -168,7 +168,6 @@
             this.usuárioToolStripMenuItem.Name = "usuárioToolStripMenuItem";
             this.usuárioToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.usuárioToolStripMenuItem.Text = "Usuário";
-            this.usuárioToolStripMenuItem.Click += new System.EventHandler(this.usuárioToolStripMenuItem_Click);
             // 
             // agressorToolStripMenuItem
             // 
@@ -255,12 +254,14 @@
             this.postToolStripMenuItem1.Name = "postToolStripMenuItem1";
             this.postToolStripMenuItem1.Size = new System.Drawing.Size(180, 26);
             this.postToolStripMenuItem1.Text = "Post";
+            this.postToolStripMenuItem1.Click += new System.EventHandler(this.postToolStripMenuItem1_Click);
             // 
             // usuárioToolStripMenuItem1
             // 
             this.usuárioToolStripMenuItem1.Name = "usuárioToolStripMenuItem1";
             this.usuárioToolStripMenuItem1.Size = new System.Drawing.Size(180, 26);
             this.usuárioToolStripMenuItem1.Text = "Usuário";
+            this.usuárioToolStripMenuItem1.Click += new System.EventHandler(this.usuárioToolStripMenuItem1_Click);
             // 
             // toolStripMenuItem2
             // 
@@ -272,12 +273,14 @@
             this.sairToolStripMenuItem1.Name = "sairToolStripMenuItem1";
             this.sairToolStripMenuItem1.Size = new System.Drawing.Size(180, 26);
             this.sairToolStripMenuItem1.Text = "Sair";
+            this.sairToolStripMenuItem1.Click += new System.EventHandler(this.sairToolStripMenuItem1_Click);
             // 
             // relatóriosToolStripMenuItem1
             // 
             this.relatóriosToolStripMenuItem1.Name = "relatóriosToolStripMenuItem1";
             this.relatóriosToolStripMenuItem1.Size = new System.Drawing.Size(90, 25);
             this.relatóriosToolStripMenuItem1.Text = "Relatórios";
+            this.relatóriosToolStripMenuItem1.Click += new System.EventHandler(this.relatóriosToolStripMenuItem1_Click);
             // 
             // Login
             // 
