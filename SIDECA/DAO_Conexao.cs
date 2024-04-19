@@ -55,18 +55,59 @@ namespace SIDECA
             return tipo;
         }
 
-        public static Boolean CadLogin(string usuario, string senha, int tipo)
+        public static Boolean CadLogin(string descricao)
         {
             bool cad = false;
             try
             {
                 con.Open();
-                MySqlCommand insere = new MySqlCommand("insert into Usuario (login, senha, tipoUsuario) " +
-                    "values ('" + usuario + "','" + senha + "'," + tipo + ")", con);
+                MySqlCommand insere = new MySqlCommand("INSERT INTO TipoUsuario (descricao) " +
+                    "VALUES ('" + descricao  + "')", con);
                 insere.ExecuteNonQuery();
                 cad = true;
             }
             catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally
+            {
+                con.Close();
+            }
+            return cad;
+        }
+
+        public static Boolean CadAgressor(string descricao)
+        {
+            bool cad = false;
+                try
+            {
+                con.Open();
+                MySqlCommand insere = new MySqlCommand("INSERT INTO TipoAgressor (descricao) " + "VALUES ('" + descricao + "')", con);
+                insere.ExecuteNonQuery();
+                cad = true;
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally
+            {
+                con.Close();
+            }
+            return cad;
+        }
+
+        public static Boolean cadCatPost(string descricao)
+        {
+            bool cad = false;
+            try
+            {
+                MySqlCommand insere = new MySqlCommand("INSERT INTO Categoria (descricao " +  "VALUES ('" + descricao + "')", con);
+                insere.ExecuteNonQuery();
+                cad = true;
+            }
+            catch(Exception ex)
             {
                 Console.WriteLine(ex.ToString());
             }

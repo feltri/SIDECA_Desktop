@@ -16,5 +16,16 @@ namespace SIDECA
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form10 cadCat = new Form10();
+            cadCat.Show();
+        }
     }
 }

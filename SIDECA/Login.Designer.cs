@@ -35,15 +35,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.gerenciarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.usuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agressorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.denúnciasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.postToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
-            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.relatóriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.gerenciarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,7 +46,6 @@
             this.sairToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.relatóriosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -134,77 +124,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Login:";
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.gerenciarToolStripMenuItem,
-            this.relatóriosToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(600, 27);
-            this.menuStrip1.TabIndex = 2;
-            this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.Visible = false;
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
-            // 
-            // gerenciarToolStripMenuItem
-            // 
-            this.gerenciarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.usuárioToolStripMenuItem,
-            this.agressorToolStripMenuItem,
-            this.denúnciasToolStripMenuItem,
-            this.postToolStripMenuItem,
-            this.toolStripMenuItem1,
-            this.sairToolStripMenuItem});
-            this.gerenciarToolStripMenuItem.Name = "gerenciarToolStripMenuItem";
-            this.gerenciarToolStripMenuItem.Size = new System.Drawing.Size(87, 23);
-            this.gerenciarToolStripMenuItem.Text = "Gerenciar";
-            // 
-            // usuárioToolStripMenuItem
-            // 
-            this.usuárioToolStripMenuItem.Name = "usuárioToolStripMenuItem";
-            this.usuárioToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
-            this.usuárioToolStripMenuItem.Text = "Usuário";
-            // 
-            // agressorToolStripMenuItem
-            // 
-            this.agressorToolStripMenuItem.Name = "agressorToolStripMenuItem";
-            this.agressorToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
-            this.agressorToolStripMenuItem.Text = "Agressor";
-            this.agressorToolStripMenuItem.Click += new System.EventHandler(this.agressorToolStripMenuItem_Click);
-            // 
-            // denúnciasToolStripMenuItem
-            // 
-            this.denúnciasToolStripMenuItem.Name = "denúnciasToolStripMenuItem";
-            this.denúnciasToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
-            this.denúnciasToolStripMenuItem.Text = "Denúncias";
-            // 
-            // postToolStripMenuItem
-            // 
-            this.postToolStripMenuItem.Name = "postToolStripMenuItem";
-            this.postToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
-            this.postToolStripMenuItem.Text = "Post";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(149, 6);
-            // 
-            // sairToolStripMenuItem
-            // 
-            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
-            this.sairToolStripMenuItem.Text = "Sair";
-            // 
-            // relatóriosToolStripMenuItem
-            // 
-            this.relatóriosToolStripMenuItem.Name = "relatóriosToolStripMenuItem";
-            this.relatóriosToolStripMenuItem.Size = new System.Drawing.Size(90, 23);
-            this.relatóriosToolStripMenuItem.Text = "Relatórios";
-            // 
             // menuStrip2
             // 
             this.menuStrip2.Enabled = false;
@@ -238,40 +157,40 @@
             // agressorToolStripMenuItem1
             // 
             this.agressorToolStripMenuItem1.Name = "agressorToolStripMenuItem1";
-            this.agressorToolStripMenuItem1.Size = new System.Drawing.Size(180, 26);
+            this.agressorToolStripMenuItem1.Size = new System.Drawing.Size(152, 26);
             this.agressorToolStripMenuItem1.Text = "Agressor";
             this.agressorToolStripMenuItem1.Click += new System.EventHandler(this.agressorToolStripMenuItem1_Click);
             // 
             // denúnciasToolStripMenuItem1
             // 
             this.denúnciasToolStripMenuItem1.Name = "denúnciasToolStripMenuItem1";
-            this.denúnciasToolStripMenuItem1.Size = new System.Drawing.Size(180, 26);
+            this.denúnciasToolStripMenuItem1.Size = new System.Drawing.Size(152, 26);
             this.denúnciasToolStripMenuItem1.Text = "Denúncias";
             this.denúnciasToolStripMenuItem1.Click += new System.EventHandler(this.denúnciasToolStripMenuItem1_Click);
             // 
             // postToolStripMenuItem1
             // 
             this.postToolStripMenuItem1.Name = "postToolStripMenuItem1";
-            this.postToolStripMenuItem1.Size = new System.Drawing.Size(180, 26);
+            this.postToolStripMenuItem1.Size = new System.Drawing.Size(152, 26);
             this.postToolStripMenuItem1.Text = "Post";
             this.postToolStripMenuItem1.Click += new System.EventHandler(this.postToolStripMenuItem1_Click);
             // 
             // usuárioToolStripMenuItem1
             // 
             this.usuárioToolStripMenuItem1.Name = "usuárioToolStripMenuItem1";
-            this.usuárioToolStripMenuItem1.Size = new System.Drawing.Size(180, 26);
+            this.usuárioToolStripMenuItem1.Size = new System.Drawing.Size(152, 26);
             this.usuárioToolStripMenuItem1.Text = "Usuário";
             this.usuárioToolStripMenuItem1.Click += new System.EventHandler(this.usuárioToolStripMenuItem1_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(177, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(149, 6);
             // 
             // sairToolStripMenuItem1
             // 
             this.sairToolStripMenuItem1.Name = "sairToolStripMenuItem1";
-            this.sairToolStripMenuItem1.Size = new System.Drawing.Size(180, 26);
+            this.sairToolStripMenuItem1.Size = new System.Drawing.Size(152, 26);
             this.sairToolStripMenuItem1.Text = "Sair";
             this.sairToolStripMenuItem1.Click += new System.EventHandler(this.sairToolStripMenuItem1_Click);
             // 
@@ -289,10 +208,8 @@
             this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip2);
-            this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
-            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Login";
             this.Text = "SIDECA";
@@ -300,8 +217,6 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             this.ResumeLayout(false);
@@ -317,15 +232,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem gerenciarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem relatóriosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem usuárioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem agressorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem denúnciasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem postToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.ToolStripMenuItem gerenciarToolStripMenuItem1;

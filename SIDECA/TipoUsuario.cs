@@ -16,5 +16,11 @@ namespace SIDECA
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CadUsuario user8 = new CadUsuario();
+            user8.Show();
+        }
     }
 }

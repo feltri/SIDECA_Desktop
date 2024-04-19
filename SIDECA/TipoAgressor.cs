@@ -21,5 +21,11 @@ namespace SIDECA
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CadAgressor cadUser = new CadAgressor();
+            cadUser.Show();
+        }
     }
 }

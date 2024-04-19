@@ -19,7 +19,11 @@ namespace SIDECA
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            //ERRO!!
+            if (DAO_Conexao.cadCatPost(textBox2.Text))
+                MessageBox.Show("Cadastro Realizado!!");
+            else
+                MessageBox.Show("Erro no Cadastro!!");
         }
     }
 }

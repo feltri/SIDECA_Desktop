@@ -16,8 +16,9 @@ namespace SIDECA
         private string login;
         private int id;
         private byte[] foto;
+        private string descricao;
 
-        public Usuario(string nome, string senha, string email, int telefone, string login, int id, byte[] foto)
+        public Usuario(string nome, string senha, string email, int telefone, string login, int id, byte[] foto, string descricao)
         {
             this.Nome = nome;
             this.Senha = senha;
@@ -26,6 +27,7 @@ namespace SIDECA
             this.Login = login;
             this.Id = id;
             this.foto = foto;
+            this.descricao = descricao;
         }
 
         public byte[] Foto { get => foto; set => foto = value; }
@@ -35,6 +37,8 @@ namespace SIDECA
         public string Email { get => email; set => email = value; }
         public string Senha { get => senha; set => senha = value; }
         public string Nome { get => nome; set => nome = value; }
+
+        public string Descricao { get => descricao; set => descricao = value; }
 
 
     }

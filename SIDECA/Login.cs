@@ -62,7 +62,7 @@ namespace SIDECA
             {
                 MessageBox.Show("Usuário ADM");
                 groupBox1.Visible = false;
-                menuStrip1.Enabled = true;
+                menuStrip2.Enabled = true;
             }
         }
 
@@ -88,22 +88,45 @@ namespace SIDECA
 
         private void denúnciasToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-
+            if (Application.OpenForms.OfType<TipoDenuncia>().Count() == 0)
+            {
+                TipoDenuncia user3 = new TipoDenuncia();
+                user3.MdiParent = this;
+                user3.Show();
+            }
         }
 
         private void postToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-
+            if (Application.OpenForms.OfType<TipoCategoria>().Count() == 0)
+            {
+                TipoCategoria user2 = new TipoCategoria();
+                user2.MdiParent = this;
+                user2.Show();
+            }
         }
 
         private void usuárioToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-
+            if (Application.OpenForms.OfType<TipoUsuario>().Count() == 0)
+            {
+                TipoUsuario user4 = new TipoUsuario();
+                user4.MdiParent = this;
+                user4.Show();
+            }
         }
 
         private void relatóriosToolStripMenuItem1_Click(object sender, EventArgs e)
         {
 
         }
+
+        private void usuárioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
+
+        
+    
 }
