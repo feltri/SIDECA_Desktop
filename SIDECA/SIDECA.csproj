@@ -172,6 +172,9 @@
     <EmbeddedResource Include="CategoriaPost.resx">
       <DependentUpon>CategoriaPost.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TipoCategoria.resx">
+      <DependentUpon>TipoCategoria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TipoUsuario.resx">
       <DependentUpon>TipoUsuario.cs</DependentUpon>
     </EmbeddedResource>
