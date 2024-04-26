@@ -16,5 +16,13 @@ namespace SIDECA
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (Denuncias.cadDenuncia(textBox2.Text))
+                MessageBox.Show("Cadastro Realizado com Sucesso!!");
+            else
+                MessageBox.Show("Erro de Cadastro!!");
+        }
     }
 }

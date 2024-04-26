@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -39,6 +40,28 @@ namespace SIDECA
         public string Nome { get => nome; set => nome = value; }
 
         public string Descricao { get => descricao; set => descricao = value; }
+
+        public static Boolean CadLogin(string descricao)
+        {
+            bool cad = false;
+            try
+            {
+                DAO_Conexao.con.Open();
+                MySqlCommand insere = new MySqlCommand("INSERT INTO TipoUsuario (descricao) " +
+                    "VALUES ('" + descricao + "')", DAO_Conexao.con);
+                insere.ExecuteNonQuery();
+                cad = true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally
+            {
+                DAO_Conexao.con.Close();
+            }
+            return cad;
+        }
 
 
     }

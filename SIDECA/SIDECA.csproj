@@ -169,6 +169,9 @@
     <EmbeddedResource Include="CadAgressor.resx">
       <DependentUpon>CadAgressor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CadDenuncia.resx">
+      <DependentUpon>CadDenuncia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CadUsuario.resx">
       <DependentUpon>CadUsuario.cs</DependentUpon>
     </EmbeddedResource>

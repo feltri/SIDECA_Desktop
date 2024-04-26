@@ -55,7 +55,7 @@ namespace SIDECA
             return tipo;
         }
 
-        public static Boolean CadLogin(string descricao)
+       /* public static Boolean CadLogin(string descricao)
         {
             bool cad = false;
             try
@@ -75,9 +75,9 @@ namespace SIDECA
                 con.Close();
             }
             return cad;
-        }
+        }*/
 
-        public static Boolean CadAgressor(string descricao)
+       /* public static Boolean CadAgressor(string descricao)
         {
             bool cad = false;
                 try
@@ -103,7 +103,8 @@ namespace SIDECA
             bool cad = false;
             try
             {
-                MySqlCommand insere = new MySqlCommand("INSERT INTO Categoria (descricao " +  "VALUES ('" + descricao + "')", con);
+                con.Open();
+                MySqlCommand insere = new MySqlCommand("INSERT INTO Categoria (descricao) " +  "VALUES ('" + descricao + "')", con);
                 insere.ExecuteNonQuery();
                 cad = true;
             }
@@ -117,6 +118,29 @@ namespace SIDECA
             }
             return cad;
         }
+
+        public static Boolean cadDenuncia(string descricao)
+        {
+            bool cad = false;
+            try
+            {
+                con.Open();
+                MySqlCommand insere = new MySqlCommand("INSERT INTO TipoDenuncia (descricao) " + "VALUES ('" + descricao + "')", con);
+                insere.ExecuteNonQuery();
+                cad = true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally
+            {
+                con.Close();
+            }
+            return cad;
+        }*/
+
+        
 
     }
 }

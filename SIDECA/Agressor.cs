@@ -29,14 +29,15 @@ namespace SIDECA
         {
             return this.Descricao;
         }
-        public bool cadastrarAgressor()
+
+
+        public static Boolean CadAgressor(string descricao)
         {
             bool cad = false;
             try
             {
                 DAO_Conexao.con.Open();
-                MySqlCommand insere = new MySqlCommand("insert into TipoAgressor (descricao) values ('" + Descricao + "')", DAO_Conexao.con);
-
+                MySqlCommand insere = new MySqlCommand("INSERT INTO TipoAgressor (descricao) " + "VALUES ('" + descricao + "')", DAO_Conexao.con);
                 insere.ExecuteNonQuery();
                 cad = true;
             }
@@ -49,56 +50,6 @@ namespace SIDECA
                 DAO_Conexao.con.Close();
             }
             return cad;
-        }
-
-        public bool consultarAgressor()
-        {
-            Boolean existe = false;
-            try
-            {
-                DAO_Conexao.con.Open();
-                MySqlCommand consulta = new MySqlCommand("SELECT  * FROM TipoAgressor   WHERE descricao= '" + getDescricao() + "'", DAO_Conexao.con);
-                MySqlDataReader resultado = consulta.ExecuteReader();
-                if (resultado.Read())
-                {
-                    existe = true;
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.ToString());
-            }
-            finally
-            {
-                DAO_Conexao.con.Close();
-
-            }
-            return existe;
-        }
-
-        public bool excluirAluno()
-        {
-            Boolean existe = false;
-            try
-            {
-                DAO_Conexao.con.Open();
-                MySqlCommand consulta = new MySqlCommand ("DELETE * FROM TipoAgressor   WHERE descricao= '" + Descricao + "'", DAO_Conexao.con);
-                MySqlDataReader resultado = consulta.ExecuteReader();
-                if (resultado.Read())
-                {
-                    existe = true;
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.ToString());
-            }
-            finally
-            {
-                DAO_Conexao.con.Close();
-
-            }
-            return existe;
         }
 
 

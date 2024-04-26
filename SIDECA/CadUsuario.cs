@@ -19,7 +19,7 @@ namespace SIDECA
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (DAO_Conexao.CadLogin(textBox2.Text))
+            if (Usuario.CadLogin(textBox2.Text))
                 MessageBox.Show("Cadastro Realizado com Sucesso");
             else
                 MessageBox.Show("Erro de Cadastro");

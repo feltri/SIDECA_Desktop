@@ -32,14 +32,14 @@ namespace SIDECA
         {
             return this.Descricao;
         }
-        public bool cadastrarDenuncia()
+
+        public static Boolean cadDenuncia(string descricao)
         {
             bool cad = false;
             try
             {
                 DAO_Conexao.con.Open();
-                MySqlCommand insere = new MySqlCommand("insert into TipoDenuncia (descricao) values ('" + Descricao + "')", DAO_Conexao.con);
-
+                MySqlCommand insere = new MySqlCommand("INSERT INTO TipoDenuncia (descricao) " + "VALUES ('" + descricao + "')", DAO_Conexao.con);
                 insere.ExecuteNonQuery();
                 cad = true;
             }
@@ -54,54 +54,30 @@ namespace SIDECA
             return cad;
         }
 
-        public bool consultarDenuncia()
-        {
-            Boolean existe = false;
-            try
+
+            /*public bool excluirDenuncia()
             {
-                DAO_Conexao.con.Open();
-                MySqlCommand consulta = new MySqlCommand("SELECT  * FROM TipoDenuncia   WHERE descricao= '" + getDescricao() + "'", DAO_Conexao.con);
-                MySqlDataReader resultado = consulta.ExecuteReader();
-                if (resultado.Read())
+
+                //temos que fazer as tabelas e alterar o WHERE
+                bool exclui = false;
+                try
                 {
-                    existe = true;
+                    DAO_Conexao.con.Open();
+                    MySqlCommand update = new MySqlCommand("UPDATE TipoDenuncia SET ativo=0 WHERE descricao = '" + Descricao1 + "'", DAO_Conexao.con);
+
+                    update.ExecuteNonQuery();
+                    exclui = true;
                 }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.ToString());
-            }
-            finally
-            {
-                DAO_Conexao.con.Close();
-
-            }
-            return existe;
-        }
-
-        public bool excluirDenuncia()
-        {
-            Boolean existe = false;
-            try
-            {
-                DAO_Conexao.con.Open();
-                MySqlCommand consulta = new MySqlCommand("DELETE * FROM TipoAgressor   WHERE id= '" + id + "'", DAO_Conexao.con);
-                MySqlDataReader resultado = consulta.ExecuteReader();
-                if (resultado.Read())
+                catch (Exception ex)
                 {
-                    existe = true;
+                    Console.WriteLine(ex.ToString());
                 }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.ToString());
-            }
-            finally
-            {
-                DAO_Conexao.con.Close();
+                finally
+                {
+                    DAO_Conexao.con.Close();
 
-            }
-            return existe;
+                }
+                return exclui;
+            }*/
         }
-    }
 }
