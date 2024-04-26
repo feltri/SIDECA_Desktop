@@ -153,7 +153,7 @@
             this.textBox1.AccessibleName = "";
             this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox1.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(95, 32);
+            this.textBox1.Location = new System.Drawing.Point(95, 31);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(306, 22);
             this.textBox1.TabIndex = 19;
@@ -171,6 +171,7 @@
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Gerenciar tipo agressor";
+            this.groupBox1.UseWaitCursor = true;
             // 
             // TipoAgressor
             // 

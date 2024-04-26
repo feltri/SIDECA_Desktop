@@ -57,12 +57,8 @@ namespace SIDECA
             try
             {
                 DAO_Conexao.con.Open();
-                MySqlCommand consulta = new MySqlCommand("SELECT  * FROM TipoAgressor   WHERE descricao= '" + getDescricao() + "'", DAO_Conexao.con);
+                MySqlCommand consulta = new MySqlCommand("SELECT  * FROM TipoAgressor", DAO_Conexao.con);
                 MySqlDataReader resultado = consulta.ExecuteReader();
-                if (resultado.Read())
-                {
-                    existe = true;
-                }
             }
             catch (Exception ex)
             {
@@ -75,6 +71,7 @@ namespace SIDECA
             }
             return existe;
         }
+
 
         public bool excluirAluno()
         {

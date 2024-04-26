@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,9 @@ namespace SIDECA
         public TipoAgressor()
         {
             InitializeComponent();
+
+            tableLayoutPanel1.SetRow
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -24,12 +28,18 @@ namespace SIDECA
 
         private void button2_Click_1(object sender, EventArgs e)
         {
+            
 
+            DataTable dataTable = new DataTable();
+
+            int row = 0;
+
+            //foreach (DaraRow dartaRow in DataBindings )
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
-
+            
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

@@ -93,7 +93,7 @@ namespace SIDECA
         {
             if (Application.OpenForms.OfType<TipoDenuncia>().Count() == 0)
             {
-                TipoAgressor denuncia = new TipoAgressor();
+                TipoDenuncia denuncia = new TipoDenuncia();
                 denuncia.TopLevel = false;
                 denuncia.Dock = DockStyle.Fill;
                 this.Controls.Add(denuncia);
@@ -104,12 +104,28 @@ namespace SIDECA
 
         private void postToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-
+            if (Application.OpenForms.OfType<TipoCategoria>().Count() == 0)
+            {
+                TipoCategoria categoria = new TipoCategoria();
+                categoria.TopLevel = false;
+                categoria.Dock = DockStyle.Fill;
+                this.Controls.Add(categoria);
+                categoria.MdiParent = this;
+                categoria.Show();
+            }
         }
 
         private void usuárioToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-
+            if (Application.OpenForms.OfType<TipoUsuario>().Count() == 0)
+            {
+                TipoUsuario usuario = new TipoUsuario();
+                usuario.TopLevel = false;
+                usuario.Dock = DockStyle.Fill;
+                this.Controls.Add(usuario);
+                usuario.MdiParent = this;
+                usuario.Show();
+            }
         }
 
         private void relatóriosToolStripMenuItem1_Click(object sender, EventArgs e)
