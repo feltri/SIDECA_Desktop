@@ -78,9 +78,9 @@ namespace SIDECA
 
         private void agressorToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            if (Application.OpenForms.OfType<TipoAgressor>().Count() == 0)
+            if (Application.OpenForms.OfType<Teste_TipoAgressor>().Count() == 0)
             {
-                TipoAgressor agressor = new TipoAgressor();
+                Teste_TipoAgressor agressor = new Teste_TipoAgressor();
                 agressor.TopLevel = false;
                 agressor.Dock = DockStyle.Fill;
                 this.Controls.Add(agressor);

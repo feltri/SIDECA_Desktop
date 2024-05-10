@@ -16,9 +16,6 @@ namespace SIDECA
         public TipoAgressor()
         {
             InitializeComponent();
-
-            tableLayoutPanel1.SetRow
-
         }
 
         private void button2_Click(object sender, EventArgs e)

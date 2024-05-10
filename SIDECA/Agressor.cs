@@ -51,14 +51,17 @@ namespace SIDECA
             return cad;
         }
 
-        public bool consultarAgressor()
+        public MySqlDataReader consultarTipoAgressor()
         {
-            Boolean existe = false;
+            MySqlDataReader resultado = null;
+
             try
             {
                 DAO_Conexao.con.Open();
-                MySqlCommand consulta = new MySqlCommand("SELECT  * FROM TipoAgressor", DAO_Conexao.con);
-                MySqlDataReader resultado = consulta.ExecuteReader();
+
+                MySqlCommand consulta = new MySqlCommand("SELECT * FROM TipoAgressor WHERE descricao = @descricao", DAO_Conexao.con);
+                consulta.Parameters.AddWithValue("@descricao", Descricao);
+                resultado = consulta.ExecuteReader();
             }
             catch (Exception ex)
             {
@@ -67,9 +70,8 @@ namespace SIDECA
             finally
             {
                 DAO_Conexao.con.Close();
-
             }
-            return existe;
+            return resultado;
         }
 
 

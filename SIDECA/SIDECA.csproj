@@ -132,6 +132,12 @@
       <DependentUpon>CategoriaPost.cs</DependentUpon>
     </Compile>
     <Compile Include="PasswordHelper.cs" />
+    <Compile Include="Teste_TipoAgressor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teste_TipoAgressor.Designer.cs">
+      <DependentUpon>Teste_TipoAgressor.cs</DependentUpon>
+    </Compile>
     <Compile Include="TipoCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CategoriaPost.resx">
       <DependentUpon>CategoriaPost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teste_TipoAgressor.resx">
+      <DependentUpon>Teste_TipoAgressor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TipoCategoria.resx">
       <DependentUpon>TipoCategoria.cs</DependentUpon>
