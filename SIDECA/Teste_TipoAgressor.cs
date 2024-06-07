@@ -32,7 +32,7 @@ namespace SIDECA
                 // Comando SQL para recuperar os dados (substitua "Tabela" pelo nome da sua tabela e "Coluna" pelo nome da coluna cujos valores deseja exibir no ComboBox)
                 // string query = "SELECT * FROM agressor";
                 MySqlConnection con = DAO_Conexao.con;
-                MySqlCommand consulta = new MySqlCommand("SELECT * FROM TipoAgressor", DAO_Conexao.con);
+                MySqlCommand consulta = new MySqlCommand("SELECT * FROM TipoAgressor where ativo = 1", DAO_Conexao.con);
 
                 // Leitura dos dados
                 MySqlDataReader reader = consulta.ExecuteReader();
