@@ -34,7 +34,7 @@ namespace SIDECA
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            Cursor = 
         }
 
         private void gerenciarToolStripMenuItem1_Click(object sender, EventArgs e)
